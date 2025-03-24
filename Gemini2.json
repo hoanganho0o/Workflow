@@ -1,0 +1,917 @@
+{
+  "id": "eb341a34-be00-43d0-8312-9ff97670e338",
+  "revision": 0,
+  "last_node_id": 34,
+  "last_link_id": 67,
+  "nodes": [
+    {
+      "id": 28,
+      "type": "SaveImage",
+      "pos": [
+        4352.20703125,
+        3766.6337890625
+      ],
+      "size": [
+        315,
+        270
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 52
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "AI"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        1814.215087890625,
+        3765.271728515625
+      ],
+      "size": [
+        404.2131652832031,
+        437.5356750488281
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            40
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_temp_yohpv_00009_.png",
+        "image"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930",
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        1811,
+        4287
+      ],
+      "size": [
+        385.3084411621094,
+        333.6209716796875
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            41
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "dau-goi-bo-ket-thao-duoc-milaganics-jpg-1703644815-27122023094015.webp",
+        "image",
+        ""
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930",
+      "shape": 1
+    },
+    {
+      "id": 24,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        4014.522705078125,
+        3766.770751953125
+      ],
+      "size": [
+        315,
+        826
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 63
+        },
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 45
+        },
+        {
+          "label": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 64
+        },
+        {
+          "label": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 65
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 50
+        },
+        {
+          "label": "upscale_model",
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_ultimatesdupscale",
+        "ver": "778a475dde8116a2066fe07f6c9ca15554e0b5be",
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        1.6000000000000003,
+        710054248096187,
+        "randomize",
+        10,
+        1,
+        "euler",
+        "simple",
+        0.10000000000000002,
+        "Linear",
+        512,
+        512,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        true,
+        false
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 29,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        1805.325439453125,
+        3553.902099609375
+      ],
+      "size": [
+        288,
+        130
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "OPT_CONNECTION",
+          "name": "OPT_CONNECTION",
+          "type": "*"
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 21,
+      "type": "ImageResize+",
+      "pos": [
+        2231.912353515625,
+        3774.511962890625
+      ],
+      "size": [
+        315,
+        218
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            61
+          ]
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "type": "INT"
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        1200,
+        1600,
+        "lanczos",
+        "keep proportion",
+        "always",
+        0
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930",
+      "shape": 1
+    },
+    {
+      "id": 32,
+      "type": "SDVN Any List",
+      "pos": [
+        2501.8349609375,
+        4039.622802734375
+      ],
+      "size": [
+        210,
+        206
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any1",
+          "shape": 7,
+          "type": "*",
+          "link": 61
+        },
+        {
+          "name": "any2",
+          "shape": 7,
+          "type": "*",
+          "link": 67
+        },
+        {
+          "name": "any3",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "any4",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "any5",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "any6",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "any7",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "any8",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "any9",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "any10",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "any",
+          "shape": 6,
+          "type": "*",
+          "slot_index": 0,
+          "links": [
+            62
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "sdvn_comfy_node",
+        "ver": "0b2869ef2051d4763098c787cd02e86293ed168e",
+        "Node name for S&R": "SDVN Any List"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "SaveImage",
+      "pos": [
+        3155.750732421875,
+        3766.677001953125
+      ],
+      "size": [
+        413.10479736328125,
+        760.5239868164062
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 60
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "cunghocai.com"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 27,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        3643.9892578125,
+        4200.92333984375
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "UPSCALE_MODEL",
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 25,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        3645,
+        4333.404296875
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            45
+          ]
+        },
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            66
+          ]
+        },
+        {
+          "label": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "flux1-dev-fp8.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 22,
+      "type": "ImageResize+",
+      "pos": [
+        2211,
+        4299
+      ],
+      "size": [
+        315,
+        218
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            67
+          ]
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "type": "INT"
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        1200,
+        1600,
+        "lanczos",
+        "keep proportion",
+        "always",
+        0
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930",
+      "shape": 1
+    },
+    {
+      "id": 31,
+      "type": "SDVN Gemini Flash 2 Image",
+      "pos": [
+        2740.508056640625,
+        3764.49365234375
+      ],
+      "size": [
+        400,
+        208
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            60,
+            63
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "sdvn_comfy_node",
+        "ver": "0b2869ef2051d4763098c787cd02e86293ed168e",
+        "Node name for S&R": "SDVN Gemini Flash 2 Image"
+      },
+      "widgets_values": [
+        "AIzaSyC4MoNdghmpf41MU1TpREDmBjLpvTl4wwA",
+        0,
+        "thanh niên đang cầm sản phẩm dầu gội đầu",
+        "english",
+        821816523822039,
+        "randomize"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 34,
+      "type": "SDVN CLIP Text Encode",
+      "pos": [
+        3596.982177734375,
+        3774.620849609375
+      ],
+      "size": [
+        400,
+        278
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            64
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            65
+          ]
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "sdvn_comfy_node",
+        "ver": "0b2869ef2051d4763098c787cd02e86293ed168e",
+        "Node name for S&R": "SDVN CLIP Text Encode"
+      },
+      "widgets_values": [
+        "thanh niên đang cầm sản phẩm dầu gội đầu",
+        "",
+        "None",
+        "english",
+        98463072022266,
+        "randomize"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      40,
+      2,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      3,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      45,
+      25,
+      0,
+      24,
+      1,
+      "MODEL"
+    ],
+    [
+      50,
+      25,
+      2,
+      24,
+      4,
+      "VAE"
+    ],
+    [
+      51,
+      27,
+      0,
+      24,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      52,
+      24,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      60,
+      31,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      61,
+      21,
+      0,
+      32,
+      0,
+      "*"
+    ],
+    [
+      62,
+      32,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      63,
+      31,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      34,
+      0,
+      24,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      65,
+      34,
+      1,
+      24,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      66,
+      25,
+      1,
+      34,
+      0,
+      "CLIP"
+    ],
+    [
+      67,
+      22,
+      0,
+      32,
+      1,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Khu vực tải ảnh",
+      "bounding": [
+        1800,
+        3692,
+        918,
+        965
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Gemini",
+      "bounding": [
+        2726,
+        3693,
+        853,
+        851
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Tăng chất lượng ảnh",
+      "bounding": [
+        3586,
+        3693,
+        1091,
+        910
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6727499949325716,
+      "offset": [
+        -372.5929870605469,
+        -3069.8740234375
+      ]
+    },
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "ue_links": [],
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "VHS_latentpreviewrate": 0,
+    "VHS_latentpreview": false
+  },
+  "version": 0.4
+}
